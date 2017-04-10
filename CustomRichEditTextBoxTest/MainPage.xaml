@@ -1,0 +1,17 @@
+﻿<Page
+    x:Class="CustomRichEditTextBoxTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:CustomRichEditTextBoxTest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.DataContext>
+        <local:ViewModel />
+    </Page.DataContext>
+
+    <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <local:CustomRichEditBox x:Name="test" Height="200" CustomText="{Binding Path=Info ,Mode=TwoWay}" />
+        <TextBlock x:Name="btn"  Text="{Binding Path=Info}" />
+    </StackPanel>
+</Page>
