@@ -25,11 +25,17 @@ namespace CustomRichEditTextBoxTest
         public MainPage()
         {
             this.InitializeComponent();
+            Binding myBinding = new Binding();
+            myBinding.Source = this.DataContext;
+            myBinding.Path = new PropertyPath("Info");
+            myBinding.Mode = BindingMode.TwoWay;
+            myBinding.UpdateSourceTrigger = UpdateSourceTrigger.PropertyChanged;
+            BindingOperations.SetBinding(MyEditBox, CustomRichEditBox.CustomTextProperty, myBinding);
         }
 
-        private void editor_TextChanged(object sender, RoutedEventArgs e)
-        {
-            var temp = test.CustomText;
-        }
+        //private void editor_TextChanged(object sender, RoutedEventArgs e)
+        //{
+        //    var temp = test.CustomText;
+        //}
     }
 }

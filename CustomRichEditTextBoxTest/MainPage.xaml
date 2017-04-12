@@ -9,9 +9,8 @@
     <Page.DataContext>
         <local:ViewModel />
     </Page.DataContext>
-
     <StackPanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <local:CustomRichEditBox x:Name="test" Height="200" CustomText="{Binding Path=Info ,Mode=TwoWay}" />
+        <local:CustomRichEditBox x:Name="MyEditBox" Height="200" />
         <TextBlock x:Name="btn"  Text="{Binding Path=Info}" />
     </StackPanel>
 </Page>
